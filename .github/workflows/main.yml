@@ -1,0 +1,67 @@
+name: Assign Reviewer
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  assign_reviewer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Assign Reviewer
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const pr = context.payload.pull_request;
+            const owner = context.payload.repository.owner.login;
+
+            await github.pulls.requestReviewers({
+              owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+              reviewers: [owner]
+            });
+            
+      - name: Move project card
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const issue_number = context.payload.pull_request.number;
+            const repository = context.payload.repository.name;
+            const owner = context.payload.repository.owner.login;
+
+            const { data: projects } = await github.projects.listForRepo({
+              owner,
+              repo: repository
+            });
+
+            for (let project of projects) {
+              const { data: columns } = await github.projects.listColumns({
+                project_id: project.id
+              });
+
+              for (let column of columns) {
+                const { data: cards } = await github.projects.listCards({
+                  column_id: column.id
+                });
+
+                for (let card of cards) {
+                  if (card.content_url.endsWith(`/issues/${issue_number}`)) {
+                    const reviewColumn = columns.find(column => column.name === 'Review');
+
+                    if (reviewColumn) {
+                      await github.projects.moveCard({
+                        card_id: card.id,
+                        column_id: reviewColumn.id,
+                        position: 'top'
+                      });
+                    }
+
+                    break;
+                  }
+                }
+              }
+            }
