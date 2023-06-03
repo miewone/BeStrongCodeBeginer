@@ -23,7 +23,7 @@ body:
     id: problemlevels
     attributes:
       label: 문제의 난이도를 골라주세요
-      multiple: false
+      multiple: true
       options:
         - Easy
         - Medium
