@@ -1,6 +1,6 @@
 name: Baekjoon
 description: 백준 문제를 관리하기 위한 템플릿입니다.
-title: "[백준] : "
+title: "\U0001F4AC [백준] : "
 labels: ["백준"]
 assignees:
   - miewone
@@ -10,7 +10,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        [백준] :  123번 문제 와 같이 title을 작성해주세요
+        \U0001F4AC [백준] :  123번 문제 와 같이 title을 작성해주세요
   - type: input
     id: contact
     attributes:
