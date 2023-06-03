@@ -1,7 +1,7 @@
 name: Baekjoon
 description: 백준 문제를 관리하기 위한 템플릿입니다.
 title: "\U0001F4AC [백준] : "
-# labels: ["백준"]
+labels: ["백준"]
 assignees:
   - miewone
   - Mingjlee
@@ -20,7 +20,7 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: ProblemLevels
+    id: problemlevels
     attributes:
       label: 문제의 난이도를 골라주세요
       multiple: false
@@ -29,7 +29,7 @@ body:
         - Normal
         - Hard
   - type: textarea
-    id: 추가할 말
+    id: addComment
     attributes:
       label: talk
       description: 이슈에 관련된 아무말이나 해주세요
