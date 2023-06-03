@@ -33,6 +33,6 @@ body:
     attributes:
       label: talk
       description: 이슈에 관련된 아무말이나 해주세요
-      placeholder: "이 말은 꼭 해야겠다."
+      placeholder: 이 말은 꼭 해야겠다.
     validations:
       required: false
