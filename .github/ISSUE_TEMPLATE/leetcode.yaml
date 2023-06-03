@@ -12,7 +12,7 @@ body:
       value: |
          [Leetcode] : 123번 문제 와 같이 title을 작성해주세요.
   - type: input
-    id: contact
+    id: problemLink
     attributes:
       label: 문제 URL
       description: 문제 URL를 작성해주세요
@@ -20,14 +20,17 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: problemlevels
+    id: level
     attributes:
       label: 문제의 난이도를 골라주세요
+      description: 선택해주세요
       multiple: false
       options:
         - Easy
-        - Medium
+        - Normal
         - Hard
+    validations:
+      required: true
   - type: textarea
     id: addComment
     attributes:
