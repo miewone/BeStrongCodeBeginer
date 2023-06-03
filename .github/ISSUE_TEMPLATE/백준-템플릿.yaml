@@ -20,7 +20,7 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: problemlevels
+    id: what-happened
     attributes:
       label: 문제의 난이도를 골라주세요
       multiple: true
@@ -29,7 +29,7 @@ body:
         - Normal
         - Hard
   - type: textarea
-    id: addComment
+    id: logs
     attributes:
       label: talk
       description: 이슈에 관련된 아무말이나 해주세요
