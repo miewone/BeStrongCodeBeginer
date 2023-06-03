@@ -1,7 +1,7 @@
-name: Bug Reportz
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
+name: Baekjoon
+description: 백준 문제를 관리하기 위한 템플릿입니다.
+title: "\U0001F4AC [백준] : "
+labels: ["백준"]
 assignees:
   - miewone
   - Mingjlee
@@ -10,55 +10,29 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        \U0001F4AC [백준] :  123번 문제 와 같이 title을 작성해주세요
   - type: input
     id: contact
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: 문제 URL
+      description: 문제 URL를 작성해주세요
+      placeholder: ex. https://www.acmicpc.net/problem/1003
+    validations:
+      required: true
+  - type: dropdown
+    id: ProblemLevels
+    attributes:
+      label: 문제의 난이도를 골라주세요
+      multiple: false
+      options:
+        - Easy
+        - Normal
+        - Hard
+  - type: textarea
+    id: 추가할 말
+    attributes:
+      label: talk
+      description: 이슈에 관련된 아무말이나 해주세요
+      placeholder: "이 말은 꼭 해야겠다."
     validations:
       required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
