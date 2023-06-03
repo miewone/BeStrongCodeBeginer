@@ -2,10 +2,7 @@ name: Baekjoon
 description: 백준 문제를 관리하기 위한 템플릿입니다.
 title: "\U0001F4AC [백준] : "
 labels: "백준"
-assignees:
-  - miewone
-  - Mingjlee
-  - dohyun0304
+
 body:
   - type: markdown
     attributes:

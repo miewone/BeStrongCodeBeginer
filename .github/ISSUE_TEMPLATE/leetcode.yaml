@@ -2,10 +2,7 @@ name: Leetcode
 description: Leetcode 문제를 관리하기 위한 템플릿입니다.
 title: " [Leetcode] : "
 labels: "Leetcode"
-assignees:
-  - miewone
-  - Mingjlee
-  - dohyun0304
+
 body:
   - type: markdown
     attributes:
