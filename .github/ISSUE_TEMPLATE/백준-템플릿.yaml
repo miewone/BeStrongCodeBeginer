@@ -1,0 +1,38 @@
+name: 백준 템플릿
+description: 백준 문제를 관리하기 위한 템플릿입니다.
+title: "\U0001F4AC [백준] : "
+labels: ["백준"]
+assignees:
+  - miewone
+  - Mingjlee
+  - dohyun0304
+body:
+  - type: markdown
+    attributes:
+      placeholder: |
+        [백준] 123번 문제
+  - type: input
+    id: contact
+    attributes:
+      label: 문제 URL
+      description: 문제 URL를 작성해주세요
+      placeholder: ex. https://www.acmicpc.net/problem/1003
+    validations:
+      required: true
+  - type: dropdown
+    id: ProblemLevels
+    attributes:
+      label: 문제의 난이도를 골라주세요
+      multiple: false
+      options:
+        - Easy
+        - Normal
+        - Hard
+  - type: textarea
+    id: 추가할 말
+    attributes:
+      label: talk
+      description: 이슈에 관련된 아무말이나 해주세요
+      placeholder: "이 말은 꼭 해야겠다."
+    validations:
+      required: false
