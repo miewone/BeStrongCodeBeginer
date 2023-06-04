@@ -1,19 +1,30 @@
-name: programmers
-description: 실습을 관리하기 위한 템플릿입니다.
-title: "\U0001F4AC [실습] : "
-labels: "실습"
+name: Programmers
+description: 프로그래머스 문제를 관리하기 위한 템플릿입니다.
+title: "\U0001F4AC [프로그래머스] : "
+labels: "프로그래머스"
 
 body:
   - type: markdown
     attributes:
       value: |
-        [실습] :  실습 강의명을 작성해주세요
+        [프로그래머스] :  123번 문제 와 같이 title을 작성해주세요
   - type: input
     id: problemLink
     attributes:
-      label: 실습 URL
-      description: 실습 URL를 작성해주세요
+      label: 문제 URL
+      description: 문제 URL를 작성해주세요
       placeholder: ex. https://www.acmicpc.net/problem/1003
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: 문제의 난이도를 골라주세요
+      multiple: false
+      options:
+        - Easy
+        - Normal
+        - Hard
     validations:
       required: true
   - type: textarea
