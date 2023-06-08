@@ -33,7 +33,7 @@ body:
   - type: dropdown
     id: levelDetail
     attributes:
-      label: 문제의 난이도를 골라주세요
+      label: 문제의 세부 난이도를 골라주세요
       multiple: false
       options:
         - 1
