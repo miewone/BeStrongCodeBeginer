@@ -30,6 +30,19 @@ body:
         - Ruby
     validations:
       required: true
+  - type: dropdown
+    id: levelDetail
+    attributes:
+      label: 문제의 난이도를 골라주세요
+      multiple: false
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+    validations:
+      required: true
   - type: textarea
     id: addComment
     attributes:
