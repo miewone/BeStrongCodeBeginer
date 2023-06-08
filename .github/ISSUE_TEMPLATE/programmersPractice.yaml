@@ -1,0 +1,26 @@
+name: programmersPractice
+description: 실습을 관리하기 위한 템플릿입니다.
+title: "\U0001F4AC [실습] : "
+labels: "실습"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        [실습] :  실습 강의명을 작성해주세요
+  - type: input
+    id: problemLink
+    attributes:
+      label: 실습 URL
+      description: 실습 URL를 작성해주세요
+      placeholder: ex. https://www.acmicpc.net/problem/1003
+    validations:
+      required: true
+  - type: textarea
+    id: addComment
+    attributes:
+      label: talk
+      description: 이슈에 관련된 아무말이나 해주세요
+      placeholder: 이 말은 꼭 해야겠다.
+    validations:
+      required: false
