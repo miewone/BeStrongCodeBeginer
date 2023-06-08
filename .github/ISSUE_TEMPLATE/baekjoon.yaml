@@ -22,9 +22,12 @@ body:
       label: 문제의 난이도를 골라주세요
       multiple: false
       options:
-        - Easy
-        - Normal
-        - Hard
+        - Bronze
+        - Silver
+        - Gold
+        - Platinum
+        - Diamond
+        - Ruby
     validations:
       required: true
   - type: textarea
