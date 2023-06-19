@@ -34,7 +34,7 @@ class DoublyLinkedList:
         prev.next = newNode # prev node의 다음 node를 newNode로 설정
         next.prev = newNode # next node의 이전 node를 newNode로 설정
         self.nodeCount += 1 # node 총 개수 증가
-        return Ture
+        return True
 
 
 def solution(x):
