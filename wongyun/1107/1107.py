@@ -1,3 +1,6 @@
+import sys
+
+
 def check(num, broken_buttons):
     num = str(num)
     for i in num:
@@ -5,9 +8,9 @@ def check(num, broken_buttons):
             return False
     return True
 
-N = int(input())
-M = int(input())
-broken_buttons = list(map(str, input().split()))
+N = int(sys.stdin.readline())
+M = int(sys.stdin.readline())
+broken_buttons = list(map(str, sys.stdin.readline().split()))
 
 min_click = abs(N - 100) 
 
