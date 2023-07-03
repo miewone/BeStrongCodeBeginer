@@ -44,7 +44,10 @@ class BinaryTree:
 
 
     def preorder(self):
-        pass
+        if self.root:
+            return self.root.preorder()
+        else:
+            return []
 
 
 def solution(x):
