@@ -1,0 +1,22 @@
+'''
+22강 실습: 최대 힙에 새로운 원소 삽입
+
+초기 코드에 주어진 class MaxHeap 에 최대 힙에 새로운 원소를 추가하는 연산인 insert() 메서드의 구현을 완성하세요.
+
+'''
+class MaxHeap:
+
+    def __init__(self):
+        self.data = [None]
+
+
+    def insert(self, item):
+        self.data.append(item)
+        m = len(self.data) - 1
+        while self.data[m] > self.data[m//2] and m > 1:
+            self.data[m],self.data[m//2] = self.data[m//2],self.data[m]
+            m = m//2
+
+
+def solution(x):
+    return 0
